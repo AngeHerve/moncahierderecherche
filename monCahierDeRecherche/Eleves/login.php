@@ -3,7 +3,7 @@
         if(isset($_POST['submit'])){
           include 'conixion.php';
           $email = $_POST['email'];
-          $password = md5($_POST['pass']);
+          $password = $_POST['pass'];
 
           $requete = "SELECT * FROM user WHERE Email = '$email' and Password = '$password'";
           $statment = $con -> prepare($requete);
